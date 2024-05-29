@@ -95,10 +95,12 @@ function App() {
             </Route>
           </Routes>
           <ChatBot
+            headerTitle="Desired Programming Bot"
+          speechSynthesis={{ enable: true, lang: 'en' }}
             steps={[
               {
                 id: '1',
-                message: 'What is your name?',
+                message: 'Hi! My name is DP chatbot may I ask What is your name?',
                 trigger: '2',
               },
               {
@@ -120,8 +122,9 @@ function App() {
                 id: '5',
                 options: [
                   { value: 1, label: 'Number 1, What is the purpose of this todo app?', trigger: '6' },
-                  { value: 2, label: 'Number 2, How Can I Contact the admins here?', trigger: '7' },
+                  { value: 2, label: 'Number 2, How Can I Contact the admins here?', trigger: '13' },
                   { value: 3, label: 'Number 3, Can I add todos anytime?', trigger: '8' },
+                  { value: 4, label: 'Number 4, End', trigger: '14' }
                 ],
               },
               {
@@ -162,6 +165,16 @@ function App() {
                 id: '12',
                 message: 'fb/Arjeeyorong22',
                 trigger: 5,
+              },
+              {
+                id: '13',
+                message: 'you can pick any admin from admin 1 to 4',
+                trigger: 7,
+              },
+              {
+                id: '14',
+                message: 'Okay thank you for chatting with me, Just refresh if you want to chat with me again, bye!',
+                end: true,
               },
             ]}
             floating={true}
